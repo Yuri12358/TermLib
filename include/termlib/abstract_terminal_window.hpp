@@ -40,6 +40,8 @@ public:
 
     virtual Vec2i getSize() const = 0;
 
+    virtual void clear(Color background = Color::Black) = 0;
+
 protected:
     bool echoing = true;
 };

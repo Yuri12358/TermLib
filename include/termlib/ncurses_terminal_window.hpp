@@ -69,6 +69,13 @@ public:
         return size;
     }
 
+    void clear(Color background = Color::Black) override {
+        wclear(pWin);
+
+        NcursesColorPair pair{ TerminalColor{ Color::Black, background } };
+        wbkgd(pWin, COLOR_PAIR(pair.getID()));
+    }
+
 private:
     WINDOW * pWin;
 

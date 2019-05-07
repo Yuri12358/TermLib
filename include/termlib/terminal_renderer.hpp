@@ -84,6 +84,11 @@ public:
         return *this;
     }
 
+    TerminalRenderer & clear(Color bgColor = Color::Black) {
+        win.clear(bgColor);
+        return *this;
+    }
+
 private:
     AbstractTerminalWindow & win;
 
