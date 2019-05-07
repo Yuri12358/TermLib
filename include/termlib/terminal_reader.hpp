@@ -36,6 +36,14 @@ public:
         return buffer;
     }
 
+    void setEchoing(bool echo) {
+        win.setEchoing(echo);
+    }
+
+    bool getEchoing() const {
+        return win.getEchoing();
+    }
+
 private:
     AbstractTerminalWindow & win;
 };
