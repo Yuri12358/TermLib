@@ -100,8 +100,12 @@ private:
 
     int getNcursesAttrMask(int mask) {
         int ncursMask = 0;
+
         if (mask & TextStyle::Bold)
             ncursMask |= A_BOLD;
+        
+        if (mask & TextStyle::Underlined)
+            ncursMask |= A_UNDERLINE;
 
         return ncursMask;
     }

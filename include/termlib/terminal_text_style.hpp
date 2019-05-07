@@ -7,7 +7,8 @@
 struct TextStyle {
     enum TextAttribute {
         None = 0,
-        Bold = 1 << 0
+        Bold = 1 << 0,
+        Underlined = 1 << 1
     };
 
     int attributes;
