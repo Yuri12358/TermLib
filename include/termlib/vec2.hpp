@@ -19,6 +19,16 @@ class Vec2 { public:
 		return *this;
 	}
 
+    template<class U>
+    bool operator==(const Vec2<U> & v) const {
+        return x == v.x and y == v.y;
+    }
+
+    template<class U>
+    bool operator!=(const Vec2<U> & v) const {
+        return x != v.x or y != v.y;
+    }
+
 	Vec2 operator+(const Vec2 & v) const {
 		return Vec2(x + v.x, y + v.y);
 	}
